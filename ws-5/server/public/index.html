@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat App</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"
+			integrity="sha512-8ExARjWWkIllMlNzVg7JKq9RKWPlJABQUNq6YvAjE/HobctjH/NA+bSiDMDvouBVjp4Wwnf1VP1OEv7Zgjtuxw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script defer src="app.js"></script>
+		<!-- defer essentially means load javascript only when DOM is loaded -->
+	</head>
+
+	<body>
+		<main>
+			<form class="form-join">
+				<input
+					type="text"
+					id="name"
+					maxlength="8"
+					placeholder="Your Name"
+					size="5"
+					autocomplete="off"
+					required
+				/>
+				<input
+					type="text"
+					id="room"
+					placeholder="Chat room"
+					size="5"
+					autocomplete="off"
+					required
+				/>
+				<button id="join" type="submit">Join</button>
+			</form>
+
+			<ul class="chat-display"></ul>
+
+			<p class="user-list"></p>
+
+			<p class="room-list"></p>
+
+			<p class="activity"></p>
+
+			<form class="form-msg">
+				<input
+					type="text"
+					id="message"
+					placeholder="Your Message"
+					autocomplete="off"
+					required
+				/>
+				<button type="submit">Send</button>
+			</form>
+		</main>
+	</body>
+</html>
